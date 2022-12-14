@@ -14,12 +14,14 @@ body {
     background-color: var(--gris);
 }
 
-h1, h2, h3, h4, h5, p, span, li, ol {
+h1, h2, h3, h4, h5, p, a, span, li, ol {
     font-style: normal;
     font-family: 'Roboto';
     font-weight: 400;
     color: var(--blanco);
 }
+
+a { color: var(--verde); }
 
 h3 { font-size: 1.5rem; }
 
