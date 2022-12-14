@@ -23,12 +23,11 @@ h1, h2, h3, h4, h5, p, span, li, ol {
 
 h3 { font-size: 1.5rem; }
 
-
-
 .light { font-weight: 200; }
 .italic { font-style: italic; }
 .gris { color: #ADADAD;}
 .blod { font-weight: 800; }
+.semi-blod { font-weight: 500; }
 
 header {
     top: 0;
@@ -150,10 +149,13 @@ header li a:hover { background-color: var(--blanco); }
 .flex-container .project-card {
     width: 270px;
     min-width: 270px;
-    height: 380px;
+    height: 400px;
     margin: 10px;
 
     border-radius: 35px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .flex-container .project-card:nth-child(1) { background: linear-gradient(179.95deg, #FCD3C5 0.05%, #FCC5C8 0.06%, #EB5F5C 99.95%);  }
@@ -180,13 +182,23 @@ header li a:hover { background-color: var(--blanco); }
     background-size: 100% 100%;
 }
 
-.project-card h3 {
-    font-size: 2rem;
+#proyectos #emv .img{
+    background: url(/img/emv/banner-emv2.png);
+    background-size: 100% 100%;
+}
 
+#proyectos #plutto .img{
+    background: url(/img/plutto/banner-plutto.png);
+    background-size: 100% 100%;
+}
+
+.project-card h3 {
+    font-size: 1.9rem;
     position: relative;
     top: 45px;
     left: 40px;
-    right: 25px;
+    right: 25px;   
+    width: min-content;
 }
 
 .project-card span {
@@ -198,17 +210,18 @@ header li a:hover { background-color: var(--blanco); }
 
 .project-card a {
     position: relative;
-    top: 65px;
-    left: -60px;
-    right: 25px;
-    
+    top: 50px;
+    left: 40px;
     background: #FFFFFF;
     color: #9E0C33;
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     border-radius: 41px;
     padding: 6px 18px;
+    width: 70px;
+    text-align: center;
 }
+
 
 .project-card a:hover {
     padding: 3px 18px;
@@ -218,7 +231,6 @@ header li a:hover { background-color: var(--blanco); }
 a:link, a:visited, a:active {
     text-decoration:none;
 }
-
 
 /** CONTACTO **/
 #contacto {
