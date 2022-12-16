@@ -9,6 +9,8 @@
     --cardMargin: 16px;
 }
   
+html { scroll-behavior: smooth; }
+
 body {
     margin: 0;
     background-color: var(--gris);
@@ -24,10 +26,11 @@ h1, h2, h3, h4, h5, p, a, span, li, ol {
 a { color: var(--verde); }
 
 h1 {
-    font-size: 3em; 
     animation: flipInX; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 0.1s; /* don't forget to set a duration! */
 }
+
+h1 { font-size: 3em; }
 h2 { font-size: 2.5rem; font-weight: 200;}
 h3 { font-size: 1.5rem; }
 
@@ -97,6 +100,9 @@ header li a:hover { background-color: var(--blanco); }
     margin-right: 10%;
     width: 400px;
     height: 400px;
+
+    animation: subebaja 6s infinite;
+
 }
 
 #presentacion .descripcion {
@@ -127,9 +133,7 @@ header li a:hover { background-color: var(--blanco); }
     margin-right: 30px;
     height: 100%;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    
-    animation-name: subebaja;
-    animation-duration: 4s;
+
 }
 
 /** TRAYECTORIA */
@@ -375,15 +379,32 @@ a:link, a:visited, a:active {
     }
 }
 
-@keyframes subebaja {
-    0%   {left:0px; top:0px;}
-    25%  {left:200px; top:0px;}
-    50%  {left:200px; top:200px;}
-    75%  {left:0px; top:200px;}
-    100% { left:0px; top:0px;}
-  }
+@media (min-width: 780px) {
+    #presentacion > img {
 
-@media (max-width: 780px) {
+        animation: subebaja 6s infinite;
+    
+    }
+
+}
+
+@keyframes subebaja {
+    0%   {position: absolute; left:1400px; top:230px;}
+    25%  {position: absolute;  left:1400px; top:330px;}
+    50%  {position: absolute;  left:1400px; top:230px;}
+    75%  {position: absolute;  left:1400px; top:330px;}
+    100% {position: absolute;  left:1400px; top:230px;}
+}
+
+@media (max-width: 1500px) {
+    #presentacion > img {
+        display: block;
+        animation: none;
+    
+    }
+}
+
+@media (max-width: 750px) {
     .seccion {
         height: auto!important;
         padding-top: 50px!important;
