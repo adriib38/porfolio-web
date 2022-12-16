@@ -23,12 +23,21 @@
     <meta property="og:site_name" content="Porfolio Adrián Benítez">
     <meta property="og:title" content="Porfolio Adrián Benítez">
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <link rel="stylesheet" href="styles/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/92a45f44ad.js" crossorigin="anonymous"></script>
 </head>
     <body>
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
         <header>
             <ul>
                 <li><a href="index.html#contacto">Contacto</a></li>
@@ -47,7 +56,7 @@
                     <h1>Proyecto #1</h1>
                     <span class="gris italic">2022</span>
                     <div>
-                        <img src="img/porfolio/mini-porfolio.png" >
+                        <img src="img/porfolio/mini-porfolio.png" data-aos="fade-right">
                         <p>
                             Son muchos los programadores que cuentan con un porfolio web. Los perfiles más comunes de porfolio son los que presentan a un programador frontend y/o diseñador, variando en cada uno el porcentaje entre las dos partes, a veces difíciles de distinguir.
                         </p>
@@ -56,7 +65,7 @@
 
                 <div class="divisor-hor"></div>
 
-                <img id="fases-desarrollo" class="centrado " src="img/porfolio/fases-desarrollo.png" width="500px">
+                <img id="fases-desarrollo" class="centrado" src="img/porfolio/fases-desarrollo.png" width="500px">
 
                 <div id="desarrollo-proyecto">
                     <h2 class="light">Investigación</h2>
@@ -66,8 +75,8 @@
                     </p>
                     <br>
                     <div class="flex">
-                        <img src="img/porfolio/sonremi.png" alt="" width="100%">
-                        <img src="img/porfolio/trayectoria.png" alt="" width="100%">
+                        <img src="img/porfolio/sonremi.png" alt="" width="100%" data-aos="fade-right">
+                        <img src="img/porfolio/trayectoria.png" alt="" width="100%" data-aos="fade-left">
                     </div>
                     <br>
                     <p>
@@ -119,15 +128,15 @@
                 <div>
                     <h3 class="light">Boceto</h3>
                     <div class="flex">
-                        <img id="boceto1" src="img/porfolio/boceto1.png" alt="" width="100%">
-                        <img id="boceto2" src="img/porfolio/boceto2.png" alt="" width="100%">
+                        <img id="boceto1" src="img/porfolio/boceto1.png" alt="" width="100%" data-aos="fade-right">
+                        <img id="boceto2" src="img/porfolio/boceto2.png" alt="" width="100%" data-aos="fade-left">
                     </div>
                 </div>
                 <div>
                     <h3 class="light">Maqueta Figma</h3>
                     <div class="flex">
-                        <img id="boceto1" src="img/porfolio/maqueta1.png" alt="" width="100%">
-                        <img id="boceto2" src="img/porfolio/maqueta2.png" alt="" width="100%">
+                        <img id="boceto1" src="img/porfolio/maqueta1.png" alt="" width="100%" data-aos="fade-right">
+                        <img id="boceto2" src="img/porfolio/maqueta2.png" alt="" width="100%" data-aos="fade-left">
                     </div>
                     <a href="https://www.figma.com/file/clp2lVdz6cEZQfbHSp0nYl/Porfolio?node-id=0%3A1&t=BXhzvi9g9xDrMYrT-1" target="_blank">Maqueta</a>
                 </div>
