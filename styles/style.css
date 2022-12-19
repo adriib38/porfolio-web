@@ -161,7 +161,6 @@ header li a:hover { background-color: var(--blanco); }
 /** PROYECTOS **/
 #proyectos {
     height: auto!important;
-    margin-left: 20px;
     background-color: var(--gris);
 }
 
