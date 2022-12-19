@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+    <!-- Google Analytics tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G8MFN5D9Z6"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-G8MFN5D9Z6');
+    </script>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,11 +26,27 @@
 
     <link rel="stylesheet" href="styles/style.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/92a45f44ad.js" crossorigin="anonymous"></script>
+
 </head>
     <body>
-        <header class="fixed">
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+
+        <header id="navbar" class="fixed">
             <ul>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
@@ -32,18 +59,31 @@
         <!-- SECCION 1 -->
         <div id="presentacion" class="seccion">
             <div class="descripcion">
-                <h1><span class="blod">Hola</span> <span class="light">mundo</span></h1>
+                <h1 style="  animation-duration: 2s; /* don't forget to set a duration! */"><span class="blod">Hola</span> <span class="light">mundo</span></h1>
                 <p>Soy Adrián Benítez. Estudiante desarrollador de aplicaciones multiplataforma.</p>
             </div>
-            <img src="img/avatar.png" alt="">
+            <img src="img/avatar.png" id="avatar" alt="">
+            <img src="img/avatar-icons.png" id="avatar-icons" alt="">
+            <img src="img/avatar-completo.png" id="avatar-completo" alt="">
         </div>
         <i class="fa-solid fa-chevron-down" id="flecha-1"></i>
         <!-- FIN SECCION 1 -->
 
         <!-- SECCION 2 -->
         <div id="sobremi" class="seccion">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in orci lacinia, posuere odio quis, malesuada metus. Suspendisse tempor elit nec purus blandit, ac tristique justo facilisis. Quisque in velit et mi dignissim posuere. Cras venenatis, leo et facilisis auctor, velit mauris dictum arcu, sed lacinia ligula nulla a velit. Aenean ultricies enim rhoncus, efficitur odio vel, semper risus. Integer nec condimentum justo. Aliquam id risus tellus. Nunc viverra sapien urna, eget placerat augue porttitor non. Nam urna leo, posuere ut luctus vitae, sagittis a erat. Morbi non efficitur quam.</p>
-            <img src="img/placeholder.png">
+            <p>Soy un joven estudiante de programación con una gran curiosidad por el mundo de la tecnología. 
+
+                <br><br>Desde una edad temprana, siempre me ha interesado cómo funcionan las cosas y cómo pueden ser mejoradas a través 
+                del uso de la tecnología. Comencé a estudiar programación en secundaria y desde entonces, he estado constantemente aprendiendo y 
+                desarrollando mis habilidades en diferentes lenguajes de programación. 
+                
+                <br><br>Actualmente, estoy en el grado superior de desarrollo de aplicaciones web (DAW), e encanta poder aplicar mis habilidades de programación en proyectos prácticos.
+                
+                <br><br>Además de mi pasión por la programación, también me gusta la lectura y aprender sobre diferentes temas. Me gusta mantenerme al día con las últimas tendencias en tecnología.
+                
+                En mi tiempo libre, también disfruto de actividades al aire libre correr o jugar a padel con amigos.
+            </p>                
+            <img src="img/portrait.png" data-aos="fade-up" data-aos-delay="300"> 
         </div>    
         <i class="fa-solid fa-chevron-down" id="flecha-2"></i>
         <!-- FIN SECCION 2 -->
@@ -57,25 +97,29 @@
 
         <!-- SECCION 4 -->
         <div id="proyectos" class="seccion">
+            <h2>Proyectos personales</h2>
             <div class="flex-container">
 
-                <div id="porfolio" class="project-card">
+                <div id="porfolio" class="project-card" data-aos="flip-up"
+                                                        data-aos-delay="0">
                     <div class="img"></div>
                     <h3 class="semi-blod">Porfolio</h3>
                     <span class="light italic">Web personal</span>
                     <a href="porfolio.html">Ver más</a>
                 </div>
                 
-                <div id="emv" class="project-card">
+                <div id="emv" class="project-card" data-aos="flip-up" 
+                                                    data-aos-delay="300">
                     <div class="img"></div>
                     <h3 class="semi-blod">EcoMaps València</h3>
                     <span class="light italic">Comercio ecológico</span>
                     <a href="https://ecomaps-valencia.uptodown.com/android">Ver más</a>
                 </div>
           
-                <div id="plutto" class="project-card">
+                <div id="plutto" class="project-card" data-aos="flip-up" 
+                                                        data-aos-delay="600">
                     <div class="img"></div>
-                    <h3>Plutto</h3>
+                    <h3 class="semi-blod">Plutto</h3>
                     <span class="light italic">Finanzas personales</span>
                     <a href="https://plutto-app.web.app/index.html">Ver más</a>
                 </div>
@@ -86,6 +130,7 @@
 
         <!-- SECCION 5 -->
           <div id="contacto" class="seccion">
+            <h2>Contacto</h2>
             <div>
                 <a href="https://www.linkedin.com/in/adri%C3%A1n-bntz/" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/adriib38" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
@@ -96,7 +141,59 @@
         </div> 
         <i class="fa-solid fa-chevron-up" id="flecha-5"></i>
         <!-- FIN SECCION 5 -->
-        
+        <button id="btn-snow" class="fa-regular fa-snowflake"></button>
+
+        <!-- NIEVE -->
+        <div id="snow" class="tpl-snow snow-none">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
 
         <script src="scripts/functions.js"></script>
     </body>

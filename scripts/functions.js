@@ -1,7 +1,6 @@
 console.log('FUNCTIONS.JS')
 
 
-
 let flechaUp = document.getElementById("flecha-5");
 flechaUp.addEventListener('click', function(){
   console.log('Hola');
@@ -11,9 +10,7 @@ flechaUp.addEventListener('click', function(){
 
 
 let flechas = document.getElementsByClassName("fa-chevron-down");
-console.log(flechas);
 for (var i = 0; i < flechas.length; i++) {
- 
   if(flechas[i].id == 'flecha-1'){
     flechas[i].addEventListener('click', function(){
       setScroll(810);
@@ -37,40 +34,7 @@ for (var i = 0; i < flechas.length; i++) {
       setScroll(3468);
     });
   }
-  
 }
-
-/** 
-for (var i = 0; i < flechas.length; i++) {
-  (function(index) {
-    flechas[index].addEventListener("click", function() {
-      console.log('Scrolleando');
-      let s = window.scrollY + 850;
-      setScroll(s);
-    })
-  })(i);
-}
-*/
-  
-/**
-
-var scrollPos = 0;
-window.addEventListener('scroll', function(){
-  if ((document.body.getBoundingClientRect()).top > scrollPos){
-    // ARRIBA
-    let scroll = window.scrollY - 600;
-    setScroll(scroll);
-  }else{
-    // ABAJO
-    let scroll = window.scrollY + 600;
-    setScroll(scroll);
-  }
-  console.log(window.scrollY);
-
-});
-
-*/
-
 
 function setScroll(s){
   window.scroll({
@@ -78,3 +42,12 @@ function setScroll(s){
     behavior: 'smooth'
   });
 }
+
+
+let btn_snow = document.getElementById("btn-snow");
+btn_snow.addEventListener('click', function(){
+  console.log('SNOW!');
+  var snow = document.getElementById("snow");
+  snow.classList.toggle("snow-none");
+  btn_snow.classList.toggle("color-white");
+})
