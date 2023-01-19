@@ -204,17 +204,17 @@ header li a:hover { background-color: var(--blanco); }
 }
 
 #proyectos #porfolio .img{
-    background: url(/img/porfolio/maqueta1.png);
+    background: url("../img/porfolio/maqueta1.png");
     background-size: 100% 100%;
 }
 
 #proyectos #emv .img{
-    background: url(/img/emv/banner-emv2.png);
+    background: url("../img/emv/banner-emv2.png");
     background-size: 100% 100%;
 }
 
 #proyectos #plutto .img{
-    background: url(/img/plutto/banner-plutto.png);
+    background: url("../img/plutto/banner-plutto.png");
     background-size: 100% 100%;
 }
 
