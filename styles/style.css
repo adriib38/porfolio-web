@@ -44,6 +44,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 999;
+    box-shadow: 0 0 30px 1px rgba(0,0,0,0.75);
 }
 
 .fixed { position: fixed; }
@@ -245,12 +246,21 @@ header li a:hover { background-color: var(--blanco); }
     border-radius: 41px;
     padding: 6px 18px;
     width: 70px;
-    text-align: center;
+    text-align: center;    color: #000000;
 }
 
 .project-card a:hover {
     padding: 3px 18px;
     transition: all .2s;
+}
+
+#otros-proyectos {
+    text-align: center;
+    margin-top: 90px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: underline;
 }
 
 a:link, a:visited, a:active {
@@ -277,7 +287,18 @@ a:link, a:visited, a:active {
     margin: 0px auto;
     padding-top: 60px;
     padding-bottom: 60px;
-    /*! height: 200px; */
+}
+
+#contacto > div {
+    background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(28, 28, 28) 50%);
+    color: white;
+    width: 865px;
+    border-radius: 35px;
+    margin: 0px auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 #contacto i {
@@ -286,7 +307,8 @@ a:link, a:visited, a:active {
 }
 
 #contacto i:hover {
-    transform: scale(.7);
+    color: var(--verde);
+    scale: 0.8;
     transition: all .2s;
 }
 
@@ -366,6 +388,65 @@ a:link, a:visited, a:active {
     margin-bottom: 60px;
 }
 
+#libreria {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 50px;
+}
+
+.card-libro {
+    width: 60%;
+    height: 100%;
+    background-color: rgb(16, 83, 95);
+    border-radius: 35px;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #333333;
+    display: flex;
+    animation: 1s ease-in-out 0s 1 slideInFromLeft;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.card-body {
+    margin-left: 20px;
+}
+
+.card-libro .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card-libro > img {
+    border-radius: 35px;
+}
+
+.card-libro > img:hover {
+    transform: scale(.9);
+    transition: all .2s;
+}
+
+.card-libro > p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
 
 @media (max-width: 1070px) {
     #sobremi,
@@ -383,6 +464,7 @@ a:link, a:visited, a:active {
         width: auto;
     }
     #btn-snow { display: none; }
+    #btn-book { display: none; }
         
     i.fa-chevron-down {
         display: none;
@@ -608,6 +690,19 @@ a:link, a:visited, a:active {
 #btn-snow {
     position: fixed;
     right: 15px;
+    bottom: 15px;
+
+    width: 50px;
+    height: 50px;
+    color: rgb(194, 183, 255);
+    font-size: 2rem;
+    background: none;
+    border: none;
+}
+
+#btn-book {
+    position: fixed;
+    left: 15px;
     bottom: 15px;
 
     width: 50px;

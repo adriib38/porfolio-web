@@ -1,0 +1,26 @@
+[
+    {
+        "titulo": "1984",
+        "valoracion": 8
+    },
+    {
+        "titulo": "Edgar Allan Poe The black cat",
+        "valoracion": 4
+    },
+    {
+        "titulo": "El hobbit",
+        "valoracion": 3
+    },
+    {
+        "titulo": "Farenheit 451",
+        "valoracion": 9
+    },
+    {
+        "titulo": "Cronica de una muerte anunciada",
+        "valoracion": 1
+    },
+    {
+        "titulo": "Un mundo feliz",
+        "valoracion": 5
+    }
+]

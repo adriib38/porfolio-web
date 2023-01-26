@@ -43,11 +43,16 @@ function setScroll(s){
   });
 }
 
-
 let btn_snow = document.getElementById("btn-snow");
 btn_snow.addEventListener('click', function(){
   console.log('SNOW!');
   var snow = document.getElementById("snow");
   snow.classList.toggle("snow-none");
   btn_snow.classList.toggle("color-white");
+})
+
+let btn_book = document.getElementById("btn-book");
+btn_book.addEventListener('click', function(){
+  console.log('BOOK!');
+  
 })
