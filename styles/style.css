@@ -147,6 +147,7 @@ nav a {
 #section-proyectos {
     display: flex;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .article-proyecto {
@@ -168,6 +169,7 @@ nav a {
 /* Tecnologias utilizadas */
 #section-tecnologias {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
@@ -505,37 +507,19 @@ a:link, a:visited, a:active {
 }
 
 @media (max-width: 1070px) {
-    #sobremi,
     #presentacion {
-      display: block;
-      height: auto!important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
     }
 
-    #sobremi {
-        text-align: center;
-        height: auto!important;
+    #presentacion  p {
+        width: 100%;
+        margin-top: 50px;
     }
 
-    #sobremi > p {
-        width: auto;
-    }
-    #btn-snow { display: none; }
-    #btn-book { display: none; }
-        
-    i.fa-chevron-down {
-        display: none;
-    }
-}
-
-@media (min-width: 780px) {
-    #presentacion > #avatar{
-        animation: subebaja 6s infinite;
-    }
-
-    #presentacion > #avatar-icons {
-        animation: subebaja-icons 6s infinite;
-    }
-
+   
 }
 
 @keyframes subebaja {
@@ -560,91 +544,6 @@ a:link, a:visited, a:active {
     100% { position: relative; top: 0px;}
 }
 
-@media (max-width: 1850px) {
-    #avatar,
-    #avatar-icons { display: none; }
-
-    #avatar-completo { display: block;}
-
-}
-
-@media (max-width: 750px) {
-    .seccion {
-        height: auto!important;
-        padding-top: 50px!important;
-        padding-bottom: 50px!important;
-        margin-top: 20px;
-        margin-left: 20px;
-    }
-
-    #sobremi,
-    #presentacion {
-      display: block;
-    }
-
-    #avatar,
-    #avatar-icons { display: none; }
-
-    #sobremi {
-        text-align: center;
-    }
-
-    #sobremi > p {
-        width: auto;
-    }
-
-    #sobremi > img {
-        height: 350px;
-        margin-right: 0px;
-        padding-right: 20px;
-    }
-
-    #trayectoria > img,
-    #contacto > div{
-        width: 100%;
-    }
-
-    #contacto > div{
-        background: none!important;
-    }
-
-    #trayectoria > img {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-
-    .flex-container .project-card {
-        margin: 5px auto;
-    }
-
-    #contacto > div {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #contacto a{
-        margin-top: 40px;
-    }
-
-    .flex-container .project-card {
-        margin: 5px auto;
-    }
-
-    #contacto > div {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    #contacto a{
-        margin-top: 40px;
-    }
-
-    /** PROECTO **/
-    #proyecto {
-        width: 70%;
-        text-align: left;
-    }
-}
 
 ::-moz-selection { /* Code for Firefox */
     color: var(--blanco);
