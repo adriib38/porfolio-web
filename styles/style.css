@@ -124,6 +124,10 @@ nav a {
 
 #presentacion img {
     float: left;
+    max-width: 600px;
+    width: 100%;
+    max-height: 600px;
+  
 }
 
 #presentacion p {
