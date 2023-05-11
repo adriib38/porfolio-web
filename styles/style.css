@@ -80,17 +80,17 @@ nav {
     height: 80px;
 }
 
-.navbar-links {
+#navbar-links {
     display: flex;
     list-style: none;
 }
 
-.navbar-links li {
+#navbar-links li {
     margin: 0 10px;
     border-radius: 5px;
 }
 
-.navbar-links li:hover{
+#navbar-links li:hover{
     outline: 1px solid var(--verde);
     background: #ffffff25;
 }
@@ -111,7 +111,7 @@ nav a {
     color: var(--blanco);
 }
 
-.navbar-links li.signout a:hover {
+#navbar-links li.signout a:hover {
     background: #7c1b1b;
 }
 
@@ -519,7 +519,30 @@ a:link, a:visited, a:active {
         margin-top: 50px;
     }
 
-   
+}
+
+/* Navbar */
+@media (max-width: 840px){
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #navbar-links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #proyectos-personales{
+        text-align: center;
+    }
+    #section-proyectos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
 }
 
 @keyframes subebaja {
