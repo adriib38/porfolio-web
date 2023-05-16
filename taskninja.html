@@ -59,8 +59,11 @@
                     <div>
                         <img src="img/tn/banner-taskninja.png" data-aos="fade-left" class="aos-init aos-animate">
                         <p>
-                            Son muchos los programadores que cuentan con un porfolio web. Los perfiles más comunes de porfolio son los que presentan a un programador frontend y/o diseñador, variando en cada uno el porcentaje entre las dos partes, a veces difíciles de distinguir.
+                            Un proyecto que nace de la necesidad de organizar las tareas de una forma más eficiente y que se adapte a las necesidades de cada persona y cada tarea.
                         </p>
+                        <span class="code">
+                            #Django, #Python, #HTML, #CSS, #JavaScript, #Figma
+                        </span>
                     </div>
                 </div>
 
@@ -108,49 +111,75 @@
                         <li>Sistema operativo: Windows 11.</li>
                     </ul>
 
-                    <h2 class="light">Diseño de cada componente.</h2>
+                    <h2 class="light">Casos de uso del proyecto.</h2>
                     <p>
-                        En esta sección se describe el diseño de cada uno de los componentes de TaskNinja, incluyendo los modelos, vistas, plantillas y formularios utilizados.
+                        Esta herramienta no va dirigida a un número de usuarios cerrado. Ya que cualquier persona podría beneficiarse de ella.
                     </p>
-                    
-                    <h3 class="blod">Modelos</h3>
-                    <p>
-                        Los modelos son las representaciones de las entidades de la base de datos utilizadas en la aplicación web.
-                    </p>
-                    <h4 class="blod">Taks</h4>
-                    <p>
-                        El modelo Task representa una tarea creada en la aplicación. Cada tarea tiene los siguientes atributos:
-                    </p>
+                    <p>Algunos usos que puede tener son:</p>
                     <ul>
                         <li>
-                            title: título de la tarea (cadena de caracteres)
+                            <strong>Planificación de grandes proyectos:</strong> gracias a la asignación de tareas a  proyectos y las vistas detalladas de cada uno es fácil entender y planificar el desarrollo de estos.
                         </li>
                         <li>
-                            description: descripción de la tarea (texto)
+                            <strong>Etiquetas de categoría:</strong> otra forma de agrupar tareas es por etiquetas. Si, por ejemplo, queremos relacionar todas las tareas que tienen que ver con el cuidado del hogar podemos asignarle a cada una de estas la etiqueta #Hogar, así luego podremos acceder a todas ellas de forma más directa.
                         </li>
                         <li>
-                            project: clave foránea del proyecto al que está asociada.
+                            <strong>API REST:</strong> con la API REST de TaskNinja los usuarios pueden acceder y gestionar sus proyectos y tareas de forma distinta. Si eres desarrollador, puedes usar la API de TaskNinja para hacer una aplicación móvil que permita gestionar tus tareas desde tu smartphone.
                         </li>
                         <li>
-                            done: marca la tarea como hecha (boolean)
+                            <strong>TEAMS:</strong> con esta funcionalidad, cada usuario puede crear un equipo y unir a otros usuarios, cada usuario miembro puede crear proyectos colaborativos, al cual todos los usuarios del equipo tendrán acceso.
                         </li>
-                        <li>
-                            created_at: fecha de creación de la tarea (fecha y hora)
-                        </li>
-                        <li>
-                            date_limit: fecha de vencimiento de la tarea (fecha y hora)
-                        </li>
-                        <li>
-                            date_done: fecha cuando se marcó como hecha (fecha y hora)
-                        </li>
-                        <li>
-                            categories: etiquetas que tiene la tarea (cadena de caracteres)
-                        </li>
-                        <li>
-                            user: clave foránea del usuario al que pertenece la tarea.
-                        </li>
-                    
                     </ul>
+                    <h2 class="light">Problemas técnicos encontrados y posibles soluciones.</h2>
+                    <p>
+                        <strong>API REST.</strong> Al momento de querer implementar un sistema donde los usuarios pudiesen acceder y tratar sus tareas surgieron algunas dudas, principalmente sobre cuál es la mejor forma de desarrollarlo con el framework donde estaba ya desarrollada la aplicación web de forma funcional (Django).
+                    </p>
+                    <p>
+                        Investigando di con Django Framework REST, una herramienta que facilita el desarrollo de APIs en este framework. 
+                    </p>
+                    <p>
+                        Una vez definido lo necesario para que funcionen las peticiones, tocó pensar en la privacidad de los usuarios, puesto que no tendría ningún sentido que cualquier persona pudiese acceder a cualquier tarea (pudiendo modificarla o eliminarla). La mejor forma de controlar el acceso a la información fue con un token de usuario.
+                    </p>
+                    <p>
+                        Cada usuario tiene acceso a un “número” que es necesario a la hora de realizar cualquier tipo de petición. Los endpoints están diseñados para devolver solo la información que pertenezca al usuario relacionado con el token. Cada usuario puede ver su token en la página de /api/. Junto a una documentación detallada.
+                    </p>
+                    <p>
+                        <strong>TEAMS.</strong> Una de las últimas funcionalidades en llegar a la aplicación ha sido esta. Su complicación técnica más interesante fué con las rutas; desde la página de un equipo se pueden realizar diferentes acciones (crear proyecto, agregar miembro…) a través de formularios. La respuesta de estos formularios se gestiona en el método de la ruta, luego se devuelve la ruta con la nueva información (en caso de que esta hubiese cambiado). Por ejemplo, si añadimos un nuevo miembro y enviamos el formulario la página se recargará con un nuevo elemento en la lista de miembros.
+                    </p>
+                    <p>
+                        Esta forma de gestionar los cambios de los proyectos causó el problema de que distintos formularios hacían acciones distintas y llegaban al mismo método donde solo se estaban filtrando las peticiones según su método (GET/POST). La solución tomada fue añadir un campo tipo “hidden” con un valor para cada acción, cómo “crear_proyecto” y “anyadir_miembro”. A pesar que funcionan correctamente todas las acciones, queda un método de vista muy extenso y cada vez que se envía un formulario se recarga la vista.
+                    </p>
+                    <p>
+                        Más adelante, y aprovechando la API (que hasta ahora no se estaba usando en la propia aplicación), se cambió la forma de realizar acciones como: marcar tarea como hecha, eliminar tarea, eliminar proyecto… Así la página no se debía refrescar con cada acción, se realizan peticiones en javascript.
+                    </p>
+                    <p>
+                        <strong>DESPLIEGUE.</strong> Al momento de abrir la aplicación al público surgieron problemas durante el proceso de despliegue. Se optó por utilizar el servicio de hosting de render.com, que permite almacenamiento de base de datos y alojamiento de aplicaciones web de forma gratuita. Este proceso dio problemas con el servicio de hosting. Hasta ahora no se ha encontrado una posible solución.
+                    </p>
+                    <h2 class="light">Proyectos futuros a partir del proyecto original.</h2>
+                    <p>
+                        Durante el desarrollo de este proyecto se han ido escribiendo posibles futuras funcionalidades. Algunas de las más destacadas:
+                    </p>
+                    <p>
+                        <strong>Calendario.</strong> Permitir la integración con aplicaciones externas de calendario, como Google Calendar o Outlook Calendar.
+                    </p>
+                    <p>
+                        <strong>Gestión de recursos.</strong> Ampliar la aplicación para que los usuarios puedan gestionar no solo las tareas, sino también los recursos necesarios para llevarlas a cabo, como presupuesto, tiempo, personal, etc.
+                    </p>
+                    <p>
+                        <strong>Gestión de versiones.</strong> Añadir un sistema de gestión de versiones para que los usuarios puedan acceder a versiones anteriores de sus proyectos y tareas en caso de que se necesite volver atrás.
+                    </p>
+                    <p>
+                        <strong>Gamificación.</strong> Incorporar elementos de gamificación a la aplicación para hacerla más divertida y motivadora, por ejemplo, asignar puntos o recompensas por la finalización de tareas y proyectos.
+                    </p>
+                    <p>
+                        <strong>TaskNinja mail.</strong> Una manera de hacer que las tareas lleguen al usuario y que no tenga que ser este el que vaya a revisarlas sería enviando, de forma automática, recordatorios al usuario. Por ejemplo, cada día enviar una lista con sus tareas con deadline al día siguiente.
+                    </p>
+                    <p>
+                        <strong>TaskNinja App.</strong> Al ser un proyecto web cada usuario puede acceder desde casi cualquier dispositivo con internet. El más interesante, en este caso sería en smartphones, ya que casi todo el mundo lleva uno con él en todo momento, y seria de gran comodidad acceder a tus lista de tareas desde una aplicación nativa. Esto daría la posibilidad de enviar recordatorios por notificaciones push.
+                    </p>
+                    <p>
+                        <strong>OkayNinja.</strong> Integrar la aplicación con asistentes virtuales: Siri, Alexa, Google Assistant… para dar la posibilidad de gestionar tareas de forma más rápida. - Oye Siri, crea una tarea “Regar jardin” para mañana.
+                    </p>
                 </div>
             </div>
         </div>
