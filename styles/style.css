@@ -144,10 +144,6 @@ nav a {
 }
 
 /* PROYECTOS */
-#proyectos-personales {
-
-}
-
 #section-proyectos {
     display: flex;
     gap: 40px;
@@ -228,10 +224,8 @@ nav a {
 .project-card .img {
     width: 200px;
     height: 150px;
-
     background-color: white;
     border-radius: 35px;
-
     position: relative;
     top: 50px;
     left: 35px;
@@ -285,6 +279,21 @@ nav a {
 
 .project-card a:hover {
     padding: 3px 18px;
+    transition: all .2s;
+}
+
+.card-link-repo {
+    border: 2px solid #9E0C33;
+    color: white;
+    background: transparent;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 41px;
+    padding: 6px 18px;
+}
+.card-link-repo:hover {
+    background: #9E0C33;
+    color: white;
     transition: all .2s;
 }
 
