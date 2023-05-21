@@ -27,7 +27,11 @@
     <meta http-equiv="expires" content="86400"/>
 
     <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
     <link rel="stylesheet" href="styles/style.css">
 
@@ -68,8 +72,7 @@
                                 Repositorio GitHub
                             </a>
                         </p>
-                    </div>
-                    
+                    </div>        
                 </div>
         
                 <div class="divisor-hor"></div>
@@ -135,10 +138,10 @@
                             <strong>TEAMS:</strong> con esta funcionalidad, cada usuario puede crear un equipo y unir a otros usuarios, cada usuario miembro puede crear proyectos colaborativos, al cual todos los usuarios del equipo tendrán acceso.
                         </li>
                     </ul>
-                    <div class="flex">
-                        <img id="" src="img/tn/tasks.PNG" alt="" width="100%" data-aos="fade-right">
-                        <img id="" src="img/tn/proyecto.PNG" alt="" width="100%" data-aos="fade-left">
-                    </div>
+                
+                    <img data-aos="fade-up" src="img/tn/tasks.PNG" width="100%">
+                    <img data-aos="fade-up" src="img/tn/proyecto.PNG" width="100%">
+               
                     <h2 class="light">Problemas técnicos encontrados y posibles soluciones.</h2>
                     <p>
                         <strong>API REST.</strong> Al momento de querer implementar un sistema donde los usuarios pudiesen acceder y tratar sus tareas surgieron algunas dudas, principalmente sobre cuál es la mejor forma de desarrollarlo con el framework donde estaba ya desarrollada la aplicación web de forma funcional (Django).
