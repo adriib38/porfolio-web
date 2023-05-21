@@ -306,21 +306,6 @@ nav a {
     text-decoration: underline;
 }
 
-a:link, a:visited, a:active {
-    text-decoration:none;
-}
-
-/** CONTACTO **/
-#contacto {
-    text-align: center;
-    width: 100%;
-    align-items: center;
-}
-
-#contacto a {
-    font-size: 4rem;
-}
-
 #contacto > div {
     background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(28, 28, 28) 50%);
     color: white;
@@ -508,6 +493,18 @@ a:link, a:visited, a:active {
     border-color: #FFCB6B;
     color: #FFCB6B;
     background: #ffcb6b31;
+}
+
+footer {
+    
+    text-align: center;
+    height: 100px;
+}
+
+footer a {
+    color: white;
+    margin-right: 80px;
+    text-decoration: none;
 }
 
 @keyframes slideInFromLeft {
