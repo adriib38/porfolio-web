@@ -349,7 +349,11 @@ nav a {
     color: #FFCB6B;
     padding: 10px 20px;
     border-radius: 35px 0px 0px 35px;
-    
+}
+
+#tema-vscode a {
+    color: #fff;
+    text-decoration: none;
 }
 
 /** PROYECTO PORFOLIO  **/
