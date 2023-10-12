@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor dinero Web</title>
+
+    <link rel="icon" type="image/x-icon" href="/img/avatar-completo.png">
+
+    <meta name="title" content="EcoMaps València">
+    <meta name="twitter:description" content="Un proyecto que nace de la necesidad de organizar las tareas de una forma más eficiente y que se adapte a las necesidades de cada persona y cada tarea.">
+    <meta property="og:site_name" content="Adrián Benítez">
+    <meta property="og:title" content="EcoMaps València">
+    <meta name="keywords" content="EcoMaps València, Adrián Benítez, Adrián, Benítez, programador, web, valencia, java, android, estudiante, aplicaciones"/>
+    <meta name="robots" content="index"/>
+    <meta http-equiv="expires" content="86400"/>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/92a45f44ad.js" crossorigin="anonymous"></script>
+</head>
+    <body> 
+        <nav>
+            <div class="logo">
+                <a href="index.html" class="logo"><img src="img/logo-adrianbenitez.png" alt="logo"></a>
+            </div>
+
+            <ul id="navbar-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#trayectoria">Trayectoria</a></li>
+                <li><a href="index.html#proyectos-personales">Proyectos</a></li>
+                <li><a href="https://linkedin.com/in/adri%C3%A1n-bntz/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/adriib38" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div id="proyecto" class="centrado">
+                <div id="proyecto-presentacion" class="centrado">
+                    <h1>Gestor dinero Web</h1>
+                    <span class="gris italic">2023</span>
+                    <div>
+                        <img src="img/gestor-dinero/banner.PNG" data-aos="fade-left" class="aos-init aos-animate">
+                        <p>
+                            📊 Aplicación web Angular con backend en Node JS y tecnología de Power BI para dashboard.
+                        </p>
+                        <span class="code">
+                            #Angular #NodeJs #PowerBI #TypeScript
+                        </span>
+                        <p>
+                            <a href="https://ecomaps-valencia.uptodown.com/android" class="card-link-repo" target="_blank" class="btn btn-primary">
+                                Repositorio
+                            </a>
+                        </p>
+                    </div>        
+                </div>
+        
+                <div class="divisor-hor"></div>
+
+                <div id="desarrollo-proyecto">
+                    <h2 class="light">Problema.</h2>
+                    <p>
+                        La organización de nuestros gastos e ingresos no es tarea sencilla. Más de una vez me ha pasado de no saber en que he gastado el dinero del que disponia hace tan solo unos días.
+                    </p>
+                    <p>
+                        Tanto no saber en que gastamos nuestro dinero como de donde proviene pueden llevarnos a <strong>tomar decisiones erroneas</strong> en nuestro día a día.
+                    </p>
+
+                    <h2 class="light">Objetivo.</h2>
+                    <p>
+                        Este proyecto tiene como objetivo principal facilitar la gestión financiera personal de las siguientes maneras:
+                        <ul>
+                            <li>Una interfaz web sencilla donde registrar los ingresos y gastos.</li>
+                            <li>Gestionar sus registros desde la API en NodeJs.</li>
+                            <li>Proporionando un reporte en Power BI.</li>
+                        </ul>
+                    </p>
+
+                    <h2 class="light">Desarrollo.</h2>
+                    <p>
+                        En primer lugar se definió la base de datos en mySql.
+                    </p>
+
+                    <p>
+                        Luego se desarrolló la API en NodeJs. API que sería consumida por la aplicación web y que más adelante puede ser utilizada desde otros clientes, como app movil.
+                    </p>
+                    
+                    <p>
+                        Finalmente la aplicación web en Angular para registrar ingresos y gastos.
+                    </p>
+
+
+                    <br>
+                    <div class="flex">
+                        <img src="img/emv/captura1.png" alt="" width="100%" data-aos="fade-right">
+                        <img src="img/emv/captura2.png" alt="" width="100%" data-aos="fade-right">
+                    </div>
+                    <br>
+
+                    <h2 class="light">Especificación de tecnologías y versiones.</h2>
+
+                    <ul id="contenido-lista">
+                        <li>Android Studio</li>            
+                        <li>Lenguaje de programación: Java.</li>
+                        <li>Base de datos: Firebase.</li>
+                        <li>Servicio de notificaciones: Firebase Cloud Messaging y OneSignal.</li>
+                        <li>Herramientas de desarrollo: Visual Studio Code</li>
+                    </ul>                
+                    <div>
+                        <h3 class="light">Resultado final</h3>
+                        <a href="https://ecomaps-valencia.uptodown.com/android"  target="_blank">
+                            App
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
