@@ -1,0 +1,77 @@
+body {
+    font-family: monospace;
+    background: #fff;
+    cursor: cell;
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 2em;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+}
+
+h4 { 
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+}
+
+article header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.date {
+    color: #616161;
+}
+
+#container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#links a {
+    font-size: 1.4em;
+    margin-right: 15px;
+    color: #3b3b3b;
+}
+
+.fa-map-pin {
+    font-size: .9em;
+}
+
+#bio,
+#about,
+#experience,
+#projects {
+    margin-bottom: 60px;
+}
+
+p {
+    color: #616161;
+}
+
+::-moz-selection {
+    color: #fff;
+    background: #3b3b3b;
+}
+  
+::selection {
+    color: #fff;
+    background: #3b3b3b;
+}

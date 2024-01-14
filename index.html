@@ -1,218 +1,130 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adrián Benítez</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
-    <title>Adrián Benítez | Programador</title>
+    <script
+      src="https://kit.fontawesome.com/92a45f44ad.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <section id="bio">
+        <h1>Adrián Benítez</h1>
+        <p>Analista BI. Desarrollador de aplicaciones web y multiplataforma.</p>
+        <p><i class="fa-solid fa-map-pin"></i> València</p>
+        <section id="links">
+          <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+          <a href="#" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </section>
+      </section>
 
-    <link rel="icon" href="img/avatar-completo.png" type="image/png" sizes="32x32">
+      <section id="about">
+        <h2>About</h2>
+        <p>
+          Como analista BI apoyo al equipo de Business Intelligence en la
+          extracción, transformación, y visualización de datos, con el objetivo
+          de mejorar la toma de decisiones y optimizar los procesos de negocio.
+          Utilizo herramientas como SQL y Power BI para crear informes y paneles
+          interactivos que facilitan el análisis y la comprensión de los datos.
+          Gracias a mi trabajo, he logrado aumentar la eficiencia y la calidad
+          de los proyectos, así como la satisfacción de los clientes.
+        </p>
+        <p>
+          Además, he estudiado de Desarrollo de aplicaciones web (DAW), donde
+          adquirí conocimientos sobre tecnologías para el desarrollo y diseño de
+          aplicaciones web. Anteriormente, realicé un ciclo formativo de grado
+          superior en Desarrollo de aplicaciones multiplataforma (DAM), donde
+          aprendí la logica de la programación, trabajando en proyectos
+          practicos con Java y SQL principalmente.
+        </p>
+        <p>
+          También tengo experiencia como desarrollador de front-end en una
+          pequeña startup de movilidad sostenible, donde diseñé y desarrollé
+          parte de la interfaz de usuario de una aplicación móvil, usando Figma
+          y Flutter. Estas experiencias me han permitido ampliar mis
+          habilidades, desarrollar mi creatividad, y aportar valor a los
+          productos. Me encanta crear soluciones innovadoras y accesibles para
+          diferentes plataformas, y me motiva aprender cosas nuevas, enfrentar
+          retos, y colaborar con otros profesionales.
+        </p>
+      </section>
 
-    <!-- Meta tags -->
-    <meta name="title" content="Adrián Benítez - Programador Web y Multiplataforma en Valencia">
-    <meta name="description" content="Hola 👋 Soy Adrián Benítez, Programador 👨‍💻 estudiante desarrollador de aplicaciones web y multiplataforma en Valencia. Trabajo con JavaScript, HTML, CSS, Python, Java, Django, y más...">
-    <meta name="author" content="Adrián Benítez">
+      <section id="experience">
+        <h2>Experiencia</h2>
+        <article>
+          <header>
+            <h3>Viewnext</h3>
+            <span class="date">Ago. 2023 - Act.</span>
+          </header>
+          <h4>Analista BI</h4>
+          <p></p>
+        </article>
+        <article>
+          <header>
+            <h3>Plan Moves</h3>
+            <span class="date">Marz. 2023 - Jun. 2023</span>
+          </header>
+          <h4>Desarrollador de Front-end</h4>
+          <p>
+            Diseño de interfaz de usuario accesible para aplicación móvil, con
+            Figma. Desarrollo de parte de la aplicación móvil, en el framework
+            Flutter. Administración y desarrollo de aplicación web en Wordpress.
+          </p>
+        </article>
+        <article>
+          <header>
+            <h3>Sopra Steria</h3>
+            <span class="date">Marz. 2022 - Jun. 2022</span>
+          </header>
+          <h4>Prácticas Front-end</h4>
+          <p>
+            Periodo de formación orientado a Front-end. Realicé un curso de
+            introducción a Angular y obtuve conocimientos sobre tecnologías para
+            el desarrollo y diseño de aplicaciones web. También aprendí teoría
+            sobre usabilidad y accesibilidad.
+          </p>
+        </article>
+      </section>
 
-    <meta property="og:site_name" content="Adrián Benítez">
-    <meta property="og:title" content="Adrián Benítez - Programador Web y Multiplataforma en Valencia">
-    <meta property="og:url" content="https://adrianbenitez.live/">
-    <meta property="og:image" content="https://adrianbenitez.live/porfolio-web/img/porfolio/mini-porfolio.png">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Hola 👋 Soy Adrián Benítez, Programador 👨‍💻 estudiante desarrollador de aplicaciones web y multiplataforma en Valencia. Trabajo con JavaScript, HTML, CSS, Python, Java, Django, Angular y más...">
-
-    <meta name="keywords" content="Adrián Benítez, Programador Web, Programador Multiplataforma, Valencia, JavaScript, HTML, CSS, Python, Java, Django, Aplicaciones">
-    <meta name="robots" content="index, follow"/>
-    <meta http-equiv="expires" content="86400"/>
-
-    <meta name="twitter:title" content="Adrián Benítez - Programador Web y Multiplataforma en Valencia">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://adrianbenitez.live/porfolio-web/img/porfolio/mini-porfolio.png">
-    <meta name="twitter:description" content="Hola 👋 Soy Adrián Benítez, Programador 👨‍💻 estudiante desarrollador de aplicaciones web y multiplataforma en Valencia. Trabajo con JavaScript, HTML, CSS, Python, Java, Django, y más...">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"/>
-
-    <!-- AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/92a45f44ad.js" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" href="styles/style.css">
-
-</head>
-    <body>
-        <!-- AOS -->
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-
-        <nav>
-            <div class="logo">
-                <a href="index.html" class="logo"><img src="img/logo-adrianbenitez.png" alt="logo"></a>
-            </div>
-
-            <ul id="navbar-links">
-                <li><a href="index.html">Inicio</a></li>
-                
-                <li><a href="index.html#proyectos-personales">Proyectos</a></li>
-                <li><a href="https://linkedin.com/in/adri%C3%A1n-bntz/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li><a href="https://github.com/adriib38" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-            </ul>
-        </nav>
-
-        <div class="alert alert-warning centrado">
-            🏗️ Página web en construcción
-        </div>
-
-        <div id="presentacion" class="">
-            <img src="img/avatar-completo.png" id="avatar-completo" data-aos="fade-left">
-            <p>Hola 👋 Soy Adrián Benítez, programador junior de València 📍.
-                
-                <br><br>👨‍🎓 He estudiado el grado superior de Desarrollo de Aplicaciones Web y  el grado superior de Desarrollo de Aplicaciones Multiplataforma.
-
-                <br><br>👨‍💻 Siempre me ha interesado cómo funcionan las cosas y cómo pueden ser mejoradas con el uso de la tecnología. Comencé a estudiar programación en secundaria y hasta ahora he aprendido y trabajado con varios lenguajes y tecnologias como <span class="code">JavaScript, CSS, Java, Python, PHP, Angular, Django...</span>
-                <br><br>
-                💼 Tengo experiencia en algunas empresas como <span class="code">Fujitsu y Sopra Steria</span> principalmente como desarrollador frontend.
-
-                <br><br>
-                Actualmente, estoy enfocado en mejorar mis habilidades de programación web.
-                <br><br>
-                Me encanta poder aplicar mis habilidades de programación en proyectos prácticos personales 👇
-            </p>  
-        </div>
-        <div id="proyectos-personales" class="seccion">
-            <h2>Proyectos personales</h2>
-
-           
-
-            <section id="section-proyectos">
-                <article id="gestor-dinero" class="article-proyecto">
-                    <a href="#" title="Ver proyecto" target="_blank">
-                        <img class="banner-proyecto" src="img\gestor-dinero\banner.png" alt="emv">
-                    </a>
-                    En desarrollo
-                    </article>
-                <article id="taskninja" class="article-proyecto" target="_blank" title="Ver proyecto">
-                    <a href="/taskninja.html" title="Ver proyecto" target="_blank">
-                        <img class="banner-proyecto" src="img\tn\banner-taskninja.png" alt="taskninja">
-                    </a>
-                    2023
-                </article>
-
-                <article id="plutto" class="article-proyecto">
-                    <a href="https://plutto-app.web.app/index.html" target="_blank" title="Ver proyecto">
-                        <img class="banner-proyecto" src="img\plutto\banner-plutto.png" alt="plutto">
-                    </a>
-                    2022
-                </article>
-
-                <article id="revels" class="article-proyecto" target="_blank" title="Ver proyecto">
-                    <a href="https://github.com/adriib38/revels" target="_blank" title="Ver proyecto">
-                        <img class="banner-proyecto" src="img\revels\banner-revels.png" alt="revels">
-                    </a>
-                    2022
-                </article>
-
-                <article id="emv" class="article-proyecto">
-                    <a href="ecomaps.html" target="_blank" title="Ver proyecto">
-                        <img class="banner-proyecto" src="img\emv\banner-emv.jpg" alt="emv">
-                    </a>
-                    2021
-                </article>
-
-                <article id="porfolio" class="article-proyecto">
-                    <a href="porfolio.html" target="_blank" title="Ver proyecto">
-                        <img class="banner-proyecto" src="img\porfolio\banner-porfolio.png" alt="porfolio">
-                    </a>
-                    2022
-                </article>
-            </section>
-        </div>
-
-        <div id="tecnologias" class="seccion">
-            <h2>Algunas de las tecnologías que he utilizado</h2>
-
-            tecnologia
-            
-            <section id="section-tecnologias">
-                <article id="tecnologia-jnodes" class="article-tecnologia">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg" alt="js">
-                    <p>NodeJs</p>
-                </article>
-
-                <article id="tecnologia-js" class="article-tecnologia">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="js">
-                    <p>JavaScript</p>
-                </article>
-
-                <article id="tecnologia-java" class="article-tecnologia">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java">
-                    <p>Java</p>
-                </article>
-
-                <article id="tecnologia-python" class="article-tecnologia">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python">
-                    <p>Python</p>
-                </article>
-
-                <article id="tecnologia-django" class="article-tecnologia">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/9f4f5cdb393299a81125eb5127929ea7bfe42889/icons/django/django-original.svg" alt="django">
-                    <p>Django</p>
-                </article>
-
-                <article id="tecnologia-ang" class="article-tecnologia">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angularjs/angularjs-original.svg" alt="angular">
-                    <p>Angular</p>
-                </article>
-
-                <article id="tecnologia-php" class="article-tecnologia">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="php">
-                    <p>PHP</p>
-                </article>
-
-                <article id="tecnologia-laravel" class="article-tecnologia">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain.svg" alt="laravel">
-                    <p>Laravel</p>
-                </article>
-
-                <article id="tecnologia-css" class="article-tecnologia">
-                    <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="css">
-                    <p>CSS</p>
-                </article>
-            </section>
-        </div>
-
-        <footer>
-            <section id="section-footer">
-                <a href="mailto:adrianbenitezb7@gmail.com">Contacto</a>
-                <a href="https://linkedin.com/in/adri%C3%A1n-bntz/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/adriib38" target="_blank">GitHub</a>
-                <a href="https://medium.com/@adrianbenitezdev" target="_blank">Medium</a>
-            </section>
-        </footer>
-
-        <div id="tema-vscode">
-            <a href="https://marketplace.visualstudio.com/items?itemName=AdrianBenitez.DarkTurtle" target="_blank">
-                ¡Mi tema de VSCode! 🐢
-            </a>
-        </div>
-        
-        <script>
-            console.log("%c¡Hola!", 
-                "font-size: 50px; font-weight: bold; color: #df0068;",
-            );
-          
-            console.log("Contacta conmigo en:");
-            console.log("%cadrianbenitezb7@gmail.com", 
-                "font-size: 20px; font-weight: bold; color: #33A9DC;",
-            );
-        </script>
-        <script src="scripts/functions.js"></script>
-    </body>
+      <section id="projects">
+        <h2>Proyectos</h2>
+        <article>
+          <header>
+            <h3>Task Ninja</h3>
+            <span class="date">Marz. 2023</span>
+          </header>
+          <p>
+            TODO Tasks app en Django (Python) Administrador web de tareas y
+            proyectos. Autenticación de usuarios. API REST con token. Equipos
+            para proyectos colaborativos.
+          </p>
+          <a href="https://github.com/adriib38/taskninja">Ir al proyecto</a>
+        </article>
+        <article>
+          <header>
+            <h3>Bookly</h3>
+            <span class="date">Jun. 2023</span>
+          </header>
+          <p>
+            Red social para aficionados a la lectura. Los usuarios pueden
+            publicar posts, buscar y seguir a otros usuarios, explorar libros...
+          </p>
+          <a href="https://github.com/adriib38/bookly-app">Ir al proyecto</a>
+        </article>
+        <p>Más en <a href="https://github.com/adriib38">GitHub</a></p>
+      </section>
+    </div>
+  </body>
 </html>
