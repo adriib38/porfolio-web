@@ -19,7 +19,7 @@ h3 {
     font-size: 1em;
 }
 
-h4 {
+h4 { 
     margin: 0;
     padding: 0;
 }
@@ -45,14 +45,34 @@ article header {
     box-sizing: border-box;
 }
 
-#links i {
-    font-size: 1.4em;
-    margin-right: 15px;
-    color: #3b3b3b;
+#links {
+    display: flex;
+    gap: 10px;
 }
 
-.fa-map-pin {
-    font-size: .9em;
+#links a,
+#links #mail {
+    display: flex;
+    font-size: 1em;
+    color: #3b3b3b;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 6px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+#links a:hover,
+#links #mail:hover {
+    background-color: #ececec;
+}
+
+#links a i {
+    opacity: .8;
+}
+
+#location {
+    font-size: .8em;
 }
 
 #bio,
@@ -60,6 +80,10 @@ article header {
 #experience,
 #projects {
     margin-bottom: 60px;
+}
+
+#bio p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 p {
@@ -70,8 +94,31 @@ p {
     color: #fff;
     background: #3b3b3b;
 }
-
+  
 ::selection {
     color: #fff;
     background: #3b3b3b;
+}
+
+#skills ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+#skills li {
+    background-color: #ececec;
+    border-radius: 3px;
+    padding: 2px 6px;
+}
+
+@media only screen and (max-width: 600px) {
+    #bio {
+        text-align: center;
+    }
+
+    #links {
+        justify-content: center;
+    }
 }
